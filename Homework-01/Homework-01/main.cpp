@@ -157,16 +157,67 @@ void ex02(){
         increment(m);
 }
 //EX01_04
+    void printArray(int array[], int arraySize){
+        for (int i = 0; i < arraySize; i++) {
+            cout << array[i] << endl;
+        }
+    }
+
+    void findNumber(int array[], int arraySize){
+        int num;
+        int hasNumber = 0;
+        
+        cout << "Enter a number: ";
+        cin >> num;
+        
+        for (int i = 0; i < arraySize; i++) {
+            if (num != array[i]) {
+                hasNumber = 0;
+            }
+            else {
+                hasNumber = 1;
+            }
+        }
+        if (hasNumber == 1) {
+            cout << "The array contains: " << num << endl;
+        }
+        if (hasNumber == 0) {
+            cout << "The array does not contain: " << num << endl;
+        }
+    }
     void ex05(){
-    
+        //a)
+        int a, b, c, d, e;
+        int numbers [5] = {a, b, c, d, e};
+        for (int i = 0; i < 5; i++) {
+            cout << "Please enter an integer: ";
+            cin >> numbers[i];
+        }
+        for (int i = 0; i < 5; i++) {
+            cout << numbers[i] << endl;
+        }
+        //b)
+        int sum = 0;
+        for (int i = 0; i < 5; i++) {
+            sum += numbers[i];
+        }
+     
+        cout << "Sum:" << sum << endl;
+        
+        int product = numbers[0]*numbers[1]*numbers[2]*numbers[3]*numbers[4];
+        cout << "Product:" << product << endl;
+        //c)
+        printArray(numbers, 5);
+        //d)
+        findNumber(numbers, 5);
 }
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n\n";
-    ex02();
+    /*ex02();
     ex03();
-    ex04();
+    ex04();*/
     ex05();
     return 0;
 }
