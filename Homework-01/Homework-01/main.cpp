@@ -215,9 +215,9 @@ void ex02(){
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n\n";
-    /*ex02();
+    ex02();
     ex03();
-    ex04();*/
+    ex04();
     ex05();
     return 0;
 }
